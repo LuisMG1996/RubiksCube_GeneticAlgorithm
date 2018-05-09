@@ -122,11 +122,83 @@ public class Cube {
         String aux_2;
         String aux_3;
 
+        right.clockwiseRotateMatrix();
 
+        aux = front.matrix[0][2];
+        aux2 = front.matrix[1][2];
+        aux3 = front.matrix[2][2];
+
+        aux_1 = top.matrix[0][2];
+        aux_2 = top.matrix[1][2];
+        aux_3 = top.matrix[2][2];
+
+        top.matrix[0][2] = aux;
+        top.matrix[1][2] = aux2;
+        top.matrix[2][2] = aux3;
+
+        aux = back.matrix[0][0];
+        aux2 = back.matrix[1][0];
+        aux3 = back.matrix[2][0];
+
+        back.matrix[0][0] = aux_3;
+        back.matrix[1][0] = aux_2;
+        back.matrix[2][0] = aux_1;
+
+        aux_1 = down.matrix[0][2];
+        aux_2 = down.matrix[1][2];
+        aux_3 = down.matrix[1][2];
+
+        down.matrix[0][2] = aux3;
+        down.matrix[1][2] = aux2;
+        down.matrix[2][2] = aux;
+
+        front.matrix[0][2] = aux_1;
+        front.matrix[1][2] = aux_2;
+        front.matrix[2][2] = aux_3;
 
     }
 
     public void counterClockwiseRightRotation(){
+        String aux;
+        String aux2;
+        String aux3;
+        String aux_1;
+        String aux_2;
+        String aux_3;
+
+        right.clockwiseRotateMatrix();
+
+        aux = front.matrix[0][2];
+        aux2 = front.matrix[1][2];
+        aux3 = front.matrix[2][2];
+
+        aux_1 = down.matrix[0][2];
+        aux_2 = down.matrix[1][2];
+        aux_3 = down.matrix[2][2];
+
+        down.matrix[0][2] = aux;
+        down.matrix[1][2] = aux2;
+        down.matrix[2][2] = aux3;
+
+        aux = back.matrix[0][0];
+        aux2 = back.matrix[1][0];
+        aux3 = back.matrix[2][0];
+
+        back.matrix[0][0] = aux_1;
+        back.matrix[1][0] = aux_2;
+        back.matrix[2][0] = aux_3;
+
+        aux_1 = top.matrix[0][2];
+        aux_2 = top.matrix[1][2];
+        aux_3 = top.matrix[1][2];
+
+        top.matrix[0][2] = aux3;
+        top.matrix[1][2] = aux2;
+        top.matrix[2][2] = aux;
+
+        front.matrix[0][2] = aux_1;
+        front.matrix[1][2] = aux_2;
+        front.matrix[2][2] = aux_3;
 
     }
 

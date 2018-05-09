@@ -3,7 +3,7 @@
  */
 public class Side {
 
-    String[][] matrix;
+    String[][] matrix = new String[3][3];
     String identifier;
     Side[] neighborSides;//first left, second top, third right, fourth down
 

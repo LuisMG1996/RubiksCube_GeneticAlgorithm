@@ -20,20 +20,58 @@ public class RubiksCube {
         Side downSide = new Side("D");
         Side backSide = new Side("B");
 
-        frontSide.setNeighborSides(new Side[]{leftSide,topSide,rightSide,downSide});
-        leftSide.setNeighborSides(new Side[]{backSide,topSide,frontSide,downSide});
-        topSide.setNeighborSides(new Side[]{leftSide,backSide,rightSide,frontSide});
-        rightSide.setNeighborSides(new Side[]{frontSide, topSide, rightSide, downSide});
-        downSide.setNeighborSides(new Side[]{leftSide,topSide,rightSide,downSide});
-        backSide.setNeighborSides(new Side[]{leftSide,topSide,rightSide,downSide});
 
         Cube cube = new Cube(frontSide,leftSide,topSide,rightSide,downSide,backSide);
         //------------------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------------------
+
+        cube.clockwiseRightRotation();
+        System.out.println("Front");
+        frontSide.printMatrix();
+        System.out.println("Left\n");
+        leftSide.printMatrix();
+        System.out.println("Top\n");
+        topSide.printMatrix();
+        System.out.println("Right\n");
+        rightSide.printMatrix();
+        System.out.println("Down\n");
+        downSide.printMatrix();
+        System.out.println("Back\n");
+        backSide.printMatrix();
+
+        System.out.println("Counter Clockwise\n");
+        cube.counterClockwiseRightRotation();
+        System.out.println("Front");
+        frontSide.printMatrix();
+        System.out.println("Left\n");
+        leftSide.printMatrix();
+        System.out.println("Top\n");
+        topSide.printMatrix();
+        System.out.println("Right\n");
+        rightSide.printMatrix();
+        System.out.println("Down\n");
+        downSide.printMatrix();
+        System.out.println("Back\n");
+        backSide.printMatrix();
+
+        System.out.println("Counter Clockwise 2\n");
+        cube.counterClockwiseRightRotation();
+        System.out.println("Front");
+        frontSide.printMatrix();
+        System.out.println("Left\n");
+        leftSide.printMatrix();
+        System.out.println("Top\n");
+        topSide.printMatrix();
+        System.out.println("Right\n");
+        rightSide.printMatrix();
+        System.out.println("Down\n");
+        downSide.printMatrix();
+        System.out.println("Back\n");
+        backSide.printMatrix();
         //------------------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------------------
 
-        frontSide.printMatrix();
+        /*frontSide.printMatrix();
         for (int i = 0 ; i < 4; i++){
             frontSide.printNeighboor(i);
         }
@@ -48,7 +86,7 @@ public class RubiksCube {
         frontSide.printMatrix();
         for (int i = 0 ; i < 4; i++){
             frontSide.printNeighboor(i);
-        }
+        }*/
 
 
         //------------------------------------------------------------------------------------------------
