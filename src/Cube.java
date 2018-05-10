@@ -427,39 +427,39 @@ public class Cube {
         String aux_2;
         String aux_3;
 
-        top.clockwiseRotateMatrix();
+        top.counterClockwiseRotateMatrix();
 
-        aux = right.matrix[0][0];
-        aux2 = right.matrix[0][1];
-        aux3 = right.matrix[0][2];
+        aux = right.matrix[2][0];
+        aux2 = right.matrix[2][1];
+        aux3 = right.matrix[2][2];
 
-        aux_1 = front.matrix[0][0];
-        aux_2 = front.matrix[0][1];
-        aux_3 = front.matrix[0][2];
+        aux_1 = front.matrix[2][0];
+        aux_2 = front.matrix[2][1];
+        aux_3 = front.matrix[2][2];
 
-        right.matrix[0][0] = aux_1;
-        right.matrix[0][1] = aux_2;
-        right.matrix[0][2] = aux_3;
+        right.matrix[2][0] = aux_1;
+        right.matrix[2][1] = aux_2;
+        right.matrix[2][2] = aux_3;
 
-        aux_1 = back.matrix[0][0];
-        aux_2 = back.matrix[0][1];
-        aux_3 = back.matrix[0][2];
+        aux_1 = back.matrix[2][0];
+        aux_2 = back.matrix[2][1];
+        aux_3 = back.matrix[2][2];
 
-        back.matrix[0][0] = aux;
-        back.matrix[0][1] = aux2;
-        back.matrix[0][2] = aux3;
+        back.matrix[2][0] = aux;
+        back.matrix[2][1] = aux2;
+        back.matrix[2][2] = aux3;
 
-        aux = left.matrix[0][0];
-        aux2 = left.matrix[0][1];
-        aux3 = left.matrix[0][2];
+        aux = left.matrix[2][0];
+        aux2 = left.matrix[2][1];
+        aux3 = left.matrix[2][2];
 
-        left.matrix[0][0] = aux_1;
-        left.matrix[0][1] = aux_2;
-        left.matrix[0][2] = aux_3;
+        left.matrix[2][0] = aux_1;
+        left.matrix[2][1] = aux_2;
+        left.matrix[2][2] = aux_3;
 
-        front.matrix[0][0] = aux;
-        front.matrix[0][1] = aux2;
-        front.matrix[0][2] = aux3;
+        front.matrix[2][0] = aux;
+        front.matrix[2][1] = aux2;
+        front.matrix[2][2] = aux3;
     }
 
 }
